@@ -251,16 +251,17 @@
             color: var(--primary-green);
         }
 
-        /* Hero Section */
+       /* Hero Section */
         .hero {
             height: 100vh;
             min-height: 700px;
-            background: linear-gradient(rgba(6, 77, 47, 0.7), rgba(6, 77, 47, 0.7)), url('https://images.unsplash.com/photo-1617089036353-5e10d1e2b5d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(6, 77, 47, 0.7), rgba(6, 77, 47, 0.7)), url('https://images.unsplash.com/photo-1656988826221-fa8652b1a08c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
         }
+
 
         .hero-content {
             max-width: 800px;
@@ -326,7 +327,7 @@
         .about-image:nth-child(1) {
             grid-column: 1 / 2;
             grid-row: 1 / 3;
-            background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80') center center/cover;
+            background: url(images/oil1.jpg);
         }
 
         .about-image:nth-child(2) {
@@ -444,16 +445,19 @@
         /* Why Choose Us */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 12px;
         }
 
         .feature-card {
             background: white;
             padding: 40px 30px;
+            width: 280px;
+            height: auto;
+            justify-content: space-between;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
-            text-align: center;
+            text-align:center;
             transition: all 0.3s ease;
         }
 
@@ -812,6 +816,28 @@
             .section {
                 padding: 60px 0;
             }
+
+            .company-card {
+                background-color: white;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 250px;
+                margin: 10px;
+            }
+
+            .cta-button {
+                display: inline-block;
+                background-color: #a8ce3b;
+                color: white;
+                padding: 10px 20px;
+                margin-top: 10px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
             
             .cta-buttons {
                 flex-direction: column;
@@ -860,12 +886,12 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#why-us">Why Choose Us</a></li>
+                    <li><a href="index.html">Oil & Gas</a></li>
+                    <li><a href="realestate.html">Real Estate</a></li>
+                    <li><a href="#tech">Technology</a></li>
+                    <li><a href="#why-us">Auto Services</a></li>
                     <li><a href="#gallery">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -874,11 +900,59 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>BRINGING THE DEPOT TO YOUR DOORSTEP</h1>
-            <p>Dependable Petroleum Supply & Real Estate Services Nationwide</p>
+            <h1>Trusted Nationwide Oil & Gas Delivery—Fast, Accurate, and Reliable</h1>
+            <p>We Offer Dependable Diesel and Oil Supply Services You Can Rely On.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-accent">Get a Quote</a>
-                <a href="#contact" class="btn btn-outline">Contact Us</a>
+                <a href="#companies" class="btn btn-accent">Get a Quote</a>
+                <a href="#contact" class="btn btn-outline">Companies</a>
+            </div>
+        </div>
+    </section>
+
+    <<!-- Our Companies -->
+    <section class="section" id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore Our Companies</h2>
+                <p>Olivtest is a group of companies that run on a unified vision to deliver innovative, reliable, and customer-focused solutions across energy, real estate, technology, and automotive industries—empowering people and businesses through excellence and integrity.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Olivtest Planet Energy Limited</h3>
+                    <p>Dependable oil and gas service delivery nationwide</p>
+                    <a href="energy.html" class="btn btn-accent">Visit Page</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Olivtest Planet Real Estate Limited</h3>
+                    <p>We provide Reliable Housing & Real Estate Solutions</p>
+                    <a href="realestate.html" class="btn btn-accent">Visit Page</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Olivtest Planet Technology Systems Limited</h3>
+                    <p>Tech solutions for established businesses and startups</p>
+                    <a href="tech.html" class="btn btn-accent">Visit Page</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Olivtest Planet Autos Galleria Limited</h3>
+                    <p>Quality car sales; connecting clients with reliable vehicles and trusted auto brands</p>
+                    <a href="auto.html" class="btn btn-accent">Visit Page</a>
+                </div>
             </div>
         </div>
     </section>
@@ -888,7 +962,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About Olivtest Planet</h2>
+                    <h2>About Olivtest Planet Energies</h2>
                     <p>Olivtest Planet Energy Limited is your complete energy alternative and partner for reliable diesel and engine oil supply across Nigeria. We serve businesses and individuals with petroleum products in large, medium, and small volumes.</p>
                     <p>We also offer on-site services including tank cleaning, diesel generator servicing, parts replacement, and accurate calibration. Our commitment to integrity, efficiency, and customer satisfaction sets us apart.</p>
                     <p>Additionally, we operate in the real estate sector, helping clients acquire and develop properties of all sizes across Abuja, Nasarawa, and Benue.</p>
@@ -1228,8 +1302,8 @@
         <div class="container">
             <h2>Whether you need diesel at your factory or land in your desired location — Olivtest Planet delivers.</h2>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-accent">Request a Quote</a>
-                <a href="#contact" class="btn btn-outline">Schedule a Site Visit</a>
+                <a href="#contact" class="btn btn-accent">Contact Us</a>
+                <a href="#contact" class="btn btn-outline">Schedule a Visit</a>
             </div>
         </div>
     </section>
@@ -1285,7 +1359,7 @@
             </div>
             
             <div class="copyright">
-                &copy; 2023 Olivtest Planet Energy Limited. All Rights Reserved.
+                &copy; 2025 Olivtest Planet Energy Limited. All Rights Reserved.
             </div>
         </div>
     </footer>
@@ -1307,6 +1381,17 @@
                 nav.classList.remove('active');
                 mobileToggle.querySelector('i').classList.add('fa-bars');
                 mobileToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.cta-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    console.log('Button clicked:', event.target.textContent);
+                    // Add any additional dynamic behavior here
+                });
             });
         });
         
