@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivtest Planet Energy Limited | Petroleum & Real Estate Services</title>
+    <link rel="icon" href="images/Small_Logo2.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-green: #064d2f;
+            --accent-green: #a8ce3b;
+            --accent-red: #e31b1b;
+            --light-bg: #f8f8f8;
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --gray-text: #666666;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 2.5rem;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--accent-green);
+            border-radius: 2px;
+        }
+
+        .text-center h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: var(--light-text);
+        }
+
+        .btn-primary:hover {
+            background: #053a25;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(6, 77, 47, 0.2);
+        }
+
+        .btn-accent {
+            background: var(--accent-green);
+            color: var(--primary-green);
+        }
+
+        .btn-accent:hover {
+            background: #94b534;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(168, 206, 59, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--light-text);
+            color: var(--light-text);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-light {
+            background: var(--light-bg);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items:center;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            /* background: var(--primary-green); */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .logo-icon i {
+            color: var(--accent-green);
+            font-size: 24px;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            align-items:baseline;
+        }
+
+        .logo-text span {
+            color: var(--accent-green);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-green);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-green);
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-green);
+        }
+
+       /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(rgba(6, 77, 47, 0.7), rgba(6, 77, 47, 0.7)), url('https://images.unsplash.com/photo-1656988826221-fa8652b1a08c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .hero-content {
+            max-width: 800px;
+            color: var(--light-text);
+            text-align: center;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .about-image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 15px;
+            height: 500px;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--box-shadow);
+        }
+
+        .about-image:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            background: url(images/oil1.jpg);
+        }
+
+        .about-image:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            background: url('https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80') center center/cover;
+        }
+
+        .about-image:nth-child(3) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80') center center/cover;
+        }
+
+        /* Services Section */
+        .services-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eaeaea;
+        }
+
+        .tab-btn {
+            padding: 15px 40px;
+            background: none;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            color: var(--gray-text);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-green);
+        }
+
+        .tab-btn.active:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-green);
+        }
+
+        .services-content {
+            display: none;
+        }
+
+        .services-content.active {
+            display: block;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-details {
+            padding: 25px;
+        }
+
+        .service-details h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .service-details ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .service-details ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-details ul li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: var(--accent-green);
+            font-size: 0.9rem;
+        }
+
+        /* Why Choose Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 12px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            width: 280px;
+            height: auto;
+            justify-content: space-between;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align:center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(168, 206, 59, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 30px;
+            color: var(--accent-green);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--box-shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Testimonials */
+        .testimonials-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+
+        .testimonial-card:before {
+            content: '\201C';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(168, 206, 59, 0.2);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            margin-top: 20px;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .author-details h4 {
+            margin-bottom: 5px;
+            color: var(--primary-green);
+        }
+
+        .author-details p {
+            margin: 0;
+            color: var(--gray-text);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            background: var(--primary-green);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            color: white;
+        }
+
+        .contact-info h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .contact-info h2:after {
+            background: var(--accent-green);
+        }
+
+        .contact-details {
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.2rem;
+            color: var(--accent-green);
+        }
+
+        .contact-text h4 {
+            margin-bottom: 5px;
+        }
+
+        .contact-text p {
+            margin: 0;
+        }
+
+        .map-container {
+            height: 300px;
+            background: #e9e9e9;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* CTA Section */
+        .cta-banner {
+            background: linear-gradient(rgba(6, 77, 47, 0.9), rgba(6, 77, 47, 0.9)), url('https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .cta-banner h2:after {
+            display: none;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-green);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-green);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact i {
+            margin-right: 15px;
+            color: var(--accent-green);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background: white;
+                transition: left 0.3s ease;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 30px;
+            }
+            
+            nav ul li {
+                margin: 0 0 20px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+
+            .company-card {
+                background-color: white;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 250px;
+                margin: 10px;
+            }
+
+            .cta-button {
+                display: inline-block;
+                background-color: #a8ce3b;
+                color: white;
+                padding: 10px 20px;
+                margin-top: 10px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .services-tabs {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                text-align: left;
+                padding: 15px 20px;
+                border-bottom: 1px solid #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="images/Main Logo4.png" alt="Olivtest Logo">
+                </div>
+                <div class="logo-text">Olivetest <span>Planet Limited</span></div> 
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Oil & Gas</a></li>
+                    <li><a href="realestate.html">Real Estate</a></li>
+                    <li><a href="#tech">Technology</a></li>
+                    <li><a href="#why-us">Auto Services</a></li>
+                    <li><a href="#gallery">Projects</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Trusted Nationwide Oil & Gas Delivery—Fast, Accurate, and Reliable</h1>
+            <p>We Offer Dependable Diesel and Oil Supply Services You Can Rely On.</p>
+            <div class="hero-buttons">
+                <a href="#companies" class="btn btn-accent">Get a Quote</a>
+                <a href="#contact" class="btn btn-outline">Companies</a>
+            </div>
+        </div>
+    </section>
+
+    <<!-- Our Companies -->
+    <section class="section" id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore Our Companies</h2>
+                <p>Olivtest is a group of companies that run on a unified vision to deliver innovative, reliable, and customer-focused solutions across energy, real estate, technology, and automotive industries—empowering people and businesses through excellence and integrity.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Olivtest Planet Energy Limited</h3>
+                    <p>Dependable oil and gas service delivery nationwide</p>
+                    <a href="energy.html" class="btn btn-accent">Visit Page</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Olivtest Planet Real Estate Limited</h3>
+                    <p>We provide Reliable Housing & Real Estate Solutions</p>
+                    <a href="realestate.html" class="btn btn-accent">Visit Page</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Olivtest Planet Technology Systems Limited</h3>
+                    <p>Tech solutions for established businesses and startups</p>
+                    <a href="tech.html" class="btn btn-accent">Visit Page</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Olivtest Planet Autos Galleria Limited</h3>
+                    <p>Quality car sales; connecting clients with reliable vehicles and trusted auto brands</p>
+                    <a href="auto.html" class="btn btn-accent">Visit Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Olivtest Planet Energies</h2>
+                    <p>Olivtest Planet Energy Limited is your complete energy alternative and partner for reliable diesel and engine oil supply across Nigeria. We serve businesses and individuals with petroleum products in large, medium, and small volumes.</p>
+                    <p>We also offer on-site services including tank cleaning, diesel generator servicing, parts replacement, and accurate calibration. Our commitment to integrity, efficiency, and customer satisfaction sets us apart.</p>
+                    <p>Additionally, we operate in the real estate sector, helping clients acquire and develop properties of all sizes across Abuja, Nasarawa, and Benue.</p>
+                    <a href="#contact" class="btn btn-primary">Contact Our Team</a>
+                </div>
+                <div class="about-image-grid">
+                    <div class="about-image"></div>
+                    <div class="about-image"></div>
+                    <div class="about-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section section-light" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive solutions for all your energy and real estate needs</p>
+            </div>
+            
+            <div class="services-tabs">
+                <button class="tab-btn active" data-tab="energy">Energy Services</button>
+                <button class="tab-btn" data-tab="real-estate">Real Estate Services</button>
+            </div>
+            
+            <div class="services-content active" id="energy-content">
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1617089036353-5e10d1e2b5d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="service-details">
+                            <h3>Bulk Diesel Supply</h3>
+                            <p>Reliable delivery of diesel in large volumes (45,000L tankers), medium and small quantities to meet your specific needs.</p>
+                            <ul>
+                                <li>45,000L tankers</li>
+                                <li>Medium and small deliveries</li>
+                                <li>Nationwide coverage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1563720223880-6a0371414a8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="service-details">
+                            <h3>Generator Maintenance</h3>
+                            <p>Professional servicing, maintenance, and parts replacement for diesel generators to ensure optimal performance.</p>
+                            <ul>
+                                <li>Routine maintenance</li>
+                                <li>Part replacements</li>
+                                <li>24/7 emergency service</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1612637968894-660373e23b03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="service-details">
+                            <h3>Tank Services</h3>
+                            <p>Comprehensive tank cleaning and calibration services to maintain efficiency and accuracy in fuel storage.</p>
+                            <ul>
+                                <li>Tank cleaning</li>
+                                <li>Precise calibration</li>
+                                <li>Metered delivery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-content" id="real-estate-content">
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="service-details">
+                            <h3>Land Acquisition</h3>
+                            <p>Strategic land acquisition services for residential, commercial, and estate development projects.</p>
+                            <ul>
+                                <li>Residential plots</li>
+                                <li>Commercial properties</li>
+                                <li>Estate development</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="service-details">
+                            <h3>Property Sales & Leasing</h3>
+                            <p>Comprehensive property solutions including sales, leasing, and management for optimal investment returns.</p>
+                            <ul>
+                                <li>Property sales</li>
+                                <li>Long-term leasing</li>
+                                <li>Property management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="service-details">
+                            <h3>Real Estate Development</h3>
+                            <p>End-to-end real estate development services from planning to construction for residential and commercial properties.</p>
+                            <ul>
+                                <li>Project planning</li>
+                                <li>Construction management</li>
+                                <li>Quality assurance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section" id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Olivtest Planet</h2>
+                <p>Our commitment to excellence sets us apart in the industry</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Accurate Meter Reading</h3>
+                    <p>Precision measurement ensures you get exactly what you pay for with every delivery.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Timely Nationwide Delivery</h3>
+                    <p>Efficient logistics network for reliable on-time delivery across Nigeria.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Experienced Technicians</h3>
+                    <p>Skilled professionals with industry expertise for all maintenance and service needs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3>Modern Tankers & Equipment</h3>
+                    <p>State-of-the-art fleet and tools for safe and efficient operations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Land in Prime Locations</h3>
+                    <p>Strategic property portfolio in high-growth areas across Abuja and surrounding states.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Excellent Customer Support</h3>
+                    <p>Dedicated team providing responsive and personalized service to all clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section section-light" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects & Gallery</h2>
+                <p>Explore our recent projects and operations</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1617089036353-5e10d1e2b5d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Fuel Delivery">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Generator Maintenance">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Tanker Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Real Estate Development">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Property Showcase">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Construction Site">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What our valued clients say about our services</p>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            Olivtest Planet has been our reliable diesel supplier for over two years. Their timely delivery and accurate metering have helped us maintain consistent operations at our factory.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AM</div>
+                            <div class="author-details">
+                                <h4>Aisha Mohammed</h4>
+                                <p>Operations Manager, Abuja Manufacturing</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            Their generator maintenance team is exceptional. Quick response times and expert technicians who know exactly what they're doing. Our production has never been interrupted since we partnered with them.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">CJ</div>
+                            <div class="author-details">
+                                <h4>Chinedu Johnson</h4>
+                                <p>Facility Manager, Lagos Office Complex</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            The real estate team helped us secure a prime commercial plot in Gwagwalada at a great price. Their knowledge of Abuja property market is impressive and their service is trustworthy.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">KO</div>
+                            <div class="author-details">
+                                <h4>Kemi Okafor</h4>
+                                <p>Business Owner, Abuja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-light" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for inquiries and quotes</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Our Office</h2>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Head Office</h4>
+                                <p>No. 42 White House Street, Saburi 2, Abuja, Nigeria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+234 703 911 1911</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>olivtestplanet2023@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.225140497084!2d7.378366074828248!3d9.058672989578132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b29d5b5a1a9%3A0x9b3b9a3d4d5b5a1a!2sAbuja%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1690569987654!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Whether you need diesel at your factory or land in your desired location — Olivtest Planet delivers.</h2>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-accent">Contact Us</a>
+                <a href="#contact" class="btn btn-outline">Schedule a Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Olivtest Planet</h3>
+                    <p>Bringing the depot to your doorstep with reliable energy solutions and premium real estate services across Nigeria.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Bulk Diesel Supply</a></li>
+                        <li><a href="#services">Generator Maintenance</a></li>
+                        <li><a href="#services">Tank Services</a></li>
+                        <li><a href="#services">Land Acquisition</a></li>
+                        <li><a href="#services">Real Estate Development</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>No. 42 White House Street, Saburi 2, Abuja, Nigeria</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+234 703 911 1911</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>olivtestplanet2023@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Olivtest Planet Energy Limited. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const nav = document.querySelector('nav');
+        
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+                mobileToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.cta-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    console.log('Button clicked:', event.target.textContent);
+                    // Add any additional dynamic behavior here
+                });
+            });
+        });
+        
+        // Service Tabs
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Hide all content
+                document.querySelectorAll('.services-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show corresponding content
+                const tabId = btn.getAttribute('data-tab') + '-content';
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real scenario, you would send this data to a server
+            // For demonstration, we'll just show an alert
+            alert(`Thank you ${name}! Your message has been received. We'll contact you at ${email} or ${phone} shortly.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
