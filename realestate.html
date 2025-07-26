@@ -82,7 +82,7 @@
 
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -181,30 +181,33 @@
             align-items: center;
         }
 
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-green);
+        .logo-container {
+            width: 60px;
+            height: 60px;
+            /* background: var(--primary-green); */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
+            /* margin-right: 4px; */
         }
 
-        .logo-icon i {
+        .logo-container i {
             color: var(--accent-green);
             font-size: 24px;
         }
 
         .logo-text {
-            font-family: 'Montserrat', sans-serif;
+            line-height: 1.2; /* Reduces vertical spacing between lines */
             font-weight: 800;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--primary-green);
         }
 
         .logo-text span {
+            display: block;
+            font-size: 1rem; /* Optional: adjust to make it smaller */
+            margin-top: -3px; /* Negative margin to pull it closer */
             color: var(--accent-green);
         }
 
@@ -920,22 +923,21 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-home"></i>
+                <div class="logo-container">
+                    <img src="images/Main_Logo_Small.png" alt="">
                 </div>
-                <div class="logo-text">Olivtest <span>Planet Limited</span></div>
+                <div class="logo-text">Olivtest Planet <br><span>Companies Group</span></div>
             </div>
             <div class="mobile-toggle">
                 <i class="fas fa-bars"></i>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Oil & Gas</a></li>
-                    <li><a href="realestate.html">Real Estate</a></li>
-                    <li><a href="#tech">Technology</a></li>
-                    <li><a href="#why-us">Auto Services</a></li>
-                    <li><a href="#gallery">Projects</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#companies">Companies</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
