@@ -481,6 +481,8 @@
             gap: 50px;
             margin-left: 40px;
             margin-right: 40px;
+            margin-top: 40px;
+            margin-bottom: 40px;
             align-items: center;
         }
 
@@ -490,6 +492,7 @@
 
         .about-text p {
             margin-bottom: 20px;
+            text-align: justify;
         }
 
         .about-image-grid {
@@ -510,19 +513,22 @@
         .about-image:nth-child(1) {
             grid-column: 1 / 2;
             grid-row: 1 / 3;
-            background: url(images/oil1.jpg);
+            background: url(images/Truck.png);
+            background-size: contain;
         }
 
         .about-image:nth-child(2) {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
-            background: url('https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80') center center/cover;
+            background-size: contain;
+            background: url(images/gallery\ \(4\).jpg) center center/cover;
         }
 
         .about-image:nth-child(3) {
             grid-column: 2 / 3;
             grid-row: 2 / 3;
-            background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80') center center/cover;
+            background-size: contain;
+            background: url(images/energy\ \(2\).jpg) center center/cover; center center/cover;
         }
 
         /* Services Section */
@@ -765,6 +771,76 @@
             color: var(--gray-text);
             font-size: 0.9rem;
         }
+
+        /* Companies section */
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 60px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        /* Companies Section  */
+     
+        .company-container {
+            background: linear-gradient(rgba(6, 77, 47, 0.741), rgba(6, 77, 47, 0.9)), url(images/Estate\ \(5\).jpg) center center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 60px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .company-card {
+            background: white;
+            padding: 40px 30px;
+            width: 330px;
+            height: auto;
+            justify-content: space-between;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align:center;
+            transition: all 0.3s ease;
+        }
+
+        .company-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(168, 206, 59, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 30px;
+            color: var(--accent-green);
+        }
+
+        .company-card h3 {
+            margin-bottom: 15px;
+            padding-top: 10px;
+            color: var(--primary-green);
+            /* margin-top: 40px; */
+        }
+
+        .company-card p {
+            margin-bottom: 05px;
+            padding-top: 10px;
+            color: #000000
+            /* margin-top: 40px; */
+        }  
 
         /* Contact Section */
         .contact-container {
@@ -1075,10 +1151,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#companies">Companies</a></li>
-                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -1120,69 +1197,21 @@
         </div>
     </section>
 
-    <<!-- Our Companies -->
-    <section class="section" id="companies">
-        <div class="container">
-            <div class="section-title">
-                <h2>Explore Our Companies</h2>
-                <p>Olivtest is a group of companies that run on a unified vision to deliver innovative, reliable, and customer-focused solutions across energy, real estate, technology, and automotive industries—empowering people and businesses through excellence and integrity.</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <h3>Olivtest Planet Energy Limited</h3>
-                    <p>Delivery of diesel, oil, gas, and other petroleum products nationwide.</p>
-                    <a href="energies.html" class="btn btn-accent2">Visit Page</a>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <h3>Olivtest Planet Real Estate Limited</h3>
-                    <p>We provide reliable Housing & Real Estate solutions accross different states in Nigeria</p>
-                    <a href="realestate.html" class="btn btn-accent2">Visit Page</a>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3>Olivtest Planet Technology Systems Limited</h3>
-                    <p>We offer Tech solutions like Web Development, Data Analytics, etc. for established businesses and startups</p>
-                    <a href="tech.html" class="btn btn-accent2">Visit Page</a>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Olivtest Planet Autos Galleria Limited</h3>
-                    <p>Quality car sales; connecting clients with reliable vehicles and trusted auto brands</p>
-                    <a href="autos.html" class="btn btn-accent2">Visit Page</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
             <div class="about-content">
-                <div class="about-text">
-                    <h2>About Olivtest Planet Energies</h2>
-                    <p>Olivtest Planet Energy Limited is your complete energy alternative and partner for reliable diesel and engine oil supply across Nigeria. We serve businesses and individuals with petroleum products in large, medium, and small volumes.</p>
-                    <p>We also offer on-site services including tank cleaning, diesel generator servicing, parts replacement, and accurate calibration. Our commitment to integrity, efficiency, and customer satisfaction sets us apart.</p>
-                    <p>Additionally, we operate in the real estate sector, helping clients acquire and develop properties of all sizes across Abuja, Nasarawa, and Benue.</p>
-                    <a href="#contact" class="btn btn-primary">Contact Our Team</a>
-                </div>
                 <div class="about-image-grid">
                     <div class="about-image"></div>
                     <div class="about-image"></div>
                     <div class="about-image"></div>
+                </div>
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>Olivtest Planet Energy Limited is your complete energy alternative and partner for reliable diesel and engine oil supply across Nigeria. We serve businesses and individuals with petroleum products in large, medium, and small volumes.</p>
+                    <p>We also offer on-site services including tank cleaning, diesel generator servicing, parts replacement, and accurate calibration. Our commitment to integrity, efficiency, and customer satisfaction sets us apart.</p>
+                    <p>Additionally, we operate in the real estate sector, helping clients acquire and develop properties of all sizes across Abuja, Nasarawa, and Benue.</p>
+                    <a href="#contact" class="btn btn-primary">Contact Our Team</a>
                 </div>
             </div>
         </div>
@@ -1193,7 +1222,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Services</h2>
-                <p>We encode integrity, diligence, efficiency, empathy etc as our core values <br> We offer nationwide delivery as well as excellent technical services</p>
+                <p><b>We encode integrity, diligence, efficiency, empathy etc as our core values. We offer nationwide delivery as well as excellent technical services</b></p>
             </div>
             
             <div class="services-content active" id="energy-content">
@@ -1257,7 +1286,7 @@
     <section class="section" id="why-us">
         <div class="container">
             <div class="section-title">
-                <h2>Why Choose Olivtest Planet</h2>
+                <h2>Why Choose Olivtest Planet Energy Ltd.</h2>
                 <p>Our commitment to excellence sets us apart in the industry</p>
             </div>
             
@@ -1418,6 +1447,54 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <<!-- Our Companies -->
+    <section class="section" id="companies">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore Our Companies</h2>
+                <p>Olivtest is a group of companies that run on a unified vision to deliver innovative, reliable, and customer-focused solutions across energy, real estate, technology, and automotive industries—empowering people and businesses through excellence and integrity.</p>
+            </div>
+            
+            <div class="company-grid">
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Olivtest Planet Energy Ltd.</h3>
+                    <p>Delivery of diesel, oil, gas, and other petroleum products nationwide.</p>
+                    <a href="energies.html" class="btn btn-accent2">Visit Page</a>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Olivtest Planet Real Estate Ltd.</h3>
+                    <p>We provide reliable Housing & Real Estate solutions accross different states in Nigeria</p>
+                    <a href="realestate.html" class="btn btn-accent2">Visit Page</a>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Olivtest Planet Technology Systems Ltd.</h3>
+                    <p>We offer Tech solutions like Web Development, Data Analytics, etc. for established businesses and startups</p>
+                    <a href="tech.html" class="btn btn-accent2">Visit Page</a>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Olivtest Planet Autos Galleria Ltd.</h3>
+                    <p>Quality car sales; connecting clients with reliable vehicles and trusted auto brands</p>
+                    <a href="autos.html" class="btn btn-accent2">Visit Page</a>
                 </div>
             </div>
         </div>
