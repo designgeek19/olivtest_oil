@@ -610,6 +610,99 @@
             font-size: 0.95rem;
         }
 
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            background: var(--primary-green);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            color: white;
+        }
+
+        .contact-info h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .contact-info h2:after {
+            background: var(--accent-green);
+        }
+
+        .contact-details {
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.2rem;
+            color: var(--accent-green);
+        }
+
+        .contact-text h4 {
+            margin-bottom: 5px;
+        }
+
+        .contact-text p {
+            margin: 0;
+        }
+
+        .map-container {
+            height: 300px;
+            background: #e9e9e9;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
         /* Newsletter */
         .newsletter-container {
             max-width: 700px;
@@ -853,7 +946,7 @@
                 <div class="logo-container">
                     <img src="images/Main_Logo_Small.png" alt="">
                 </div>
-                <div class="logo-text">Olivtest Planet <br><span>Companies Group</span></div>
+                <div class="logo-text">Olivtest Planet <br><span>Group of Companies</span></div>
             </div>
             <div class="mobile-toggle">
                 <i class="fas fa-bars"></i>
@@ -1176,6 +1269,81 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section class="section section-light" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for inquiries and quotes</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Our Office</h2>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Head Office</h4>
+                                <p>No. 42 White House Street, Saburi 2, Abuja, Nigeria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+234 703 911 1911</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>olivtestplanet2023@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.225140497084!2d7.378366074828248!3d9.058672989578132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b29d5b5a1a9%3A0x9b3b9a3d4d5b5a1a!2sAbuja%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1690569987654!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> 
+
     <!-- Newsletter -->
     <section class="section section-light" id="newsletter">
         <div class="container">
@@ -1250,7 +1418,7 @@
             </div>
             
             <div class="copyright">
-                &copy; 2023 Olivtest Planet Companies Group. All Rights Reserved.
+                &copy; 2025 Olivtest Planet Group of Companies. All Rights Reserved.
             </div>
         </div>
     </footer>
