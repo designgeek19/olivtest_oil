@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivtest Planet Technology Systems | Tech Innovation Solutions</title>
+    <link rel="icon" href="images/Main_Logo_Small.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-green: #064d2f;
+            --accent-green: #a8ce3b;
+            --accent-red: #e31b1b;
+            --light-bg: #f8f8f8;
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --gray-text: #666666;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            overflow-x: hidden;
+            background-color: #fafafa;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 2rem;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--accent-green);
+            border-radius: 2px;
+        }
+
+        .text-center h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: var(--light-text);
+        }
+
+        .btn-primary:hover {
+            background: #053a25;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(6, 77, 47, 0.2);
+        }
+
+        .btn-accent {
+            background: var(--accent-green);
+            color: var(--primary-green);
+        }
+
+        .btn-accent:hover {
+            background: #94b534;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(168, 206, 59, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--light-text);
+            color: var(--light-text);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline2 {
+            background: transparent;
+            border: 2px solid #000000;
+            color: var(--primary-green)
+        }
+
+        .section {
+            padding: 30px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            margin-bottom: -20px;
+            margin-top: -20px;
+        }
+
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-light {
+            background: var(--light-bg);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-sm);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container i {
+            color: var(--accent-green);
+            font-size: 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            /* gap: 0.75rem; */
+            text-decoration: none;
+        }
+
+        /* .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.25rem;
+        } */
+
+        .logo-text {
+            line-height: 1.2; /* Reduces vertical spacing between lines */
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--primary-green);
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 1rem; /* Optional: adjust to make it smaller */
+            margin-top: -2px; /* Negative margin to pull it closer */
+            color: var(--accent-green);
+        }
+
+        .logo-text2 {
+            line-height: 1.2; /* Reduces vertical spacing between lines */
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: #ffffff;
+        }
+
+        .logo-text2 span {
+            display: block;
+            font-size: 1rem; /* Optional: adjust to make it smaller */
+            margin-top: -2px; /* Negative margin to pull it closer */
+            color: var(--accent-green);
+            margin-bottom: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            padding-right: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-green);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0 4rem;
+            background: linear-gradient(rgba(6, 77, 47, 0.566), rgba(6, 77, 47, 0.571)), url(images/tech\ \(1\).jpg) no-repeat center center/cover;
+            /* background: linear-gradient(to bottom, #f0f9ff, #ffffff); */
+        }
+
+        .hero-container {
+            display: flex;
+            height: 500px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin-top: -80px;
+
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--light-text);
+            line-height: 1.3;
+            text-align: center;
+            /* text-transform: uppercase; */
+        }
+
+        .hero h1 span {
+            color: var(--accent-green);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--light-text);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-illustration {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding-right: 80px;
+            padding-left: 50px;
+        }
+
+        .about-content h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            text-align: justify;
+        }
+
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 400px;
+            background: linear-gradient(45deg, #dbeafe, #ede9fe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image {
+            font-size: 3rem;
+            color: var(--primary);
+            /* opacity: 0.7; */
+            border-radius: 8px;
+            height:640px;
+        }
+
+        /* Project Section */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-details {
+            padding: 30px;
+        }
+
+        .project-details h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .project-details ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .project-details ul li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .project-details ul li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: var(--accent-green);
+            font-size: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #f8fafc;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-icon {
+            width:260px;
+            height: 40px;
+            padding-top: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--accent-green);
+            font-size: 2rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+            color: var(--primary-green);
+        }
+
+        .service-card p {
+            color: var(--gray);
+            text-align: center;
+        }
+
+        /* Why Choose Us */
+        .why-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .why-image {
+            background: linear-gradient(45deg, #fffbeb, #ecfdf5);
+            border-radius: 8px;
+            display: flex;
+            opacity: 0.8;
+            align-items: center;
+            height: max-content;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .why-image-placeholder {
+            font-size: 3rem;
+            color: var(--success);
+            opacity: 0.7;
+        }
+
+        .why-list {
+            list-style: none;
+        }
+
+        .why-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .why-list .icon {
+            min-width: 24px;
+            min-height: 24px;
+            background-color: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+            justify-content: center;
+            color: var(--accent-green)
+        }
+
+        .why-list h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Companies section */
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 60px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        /* Companies Section  */
+     
+        .company-container {
+            background: linear-gradient(rgba(6, 77, 47, 0.741), rgba(6, 77, 47, 0.9)), url(images/Estate\ \(5\).jpg) center center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 60px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .company-card {
+            background: white;
+            padding: 40px 30px;
+            width: 330px;
+            height: auto;
+            justify-content: space-between;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align:center;
+            transition: all 0.3s ease;
+        }
+
+        .company-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(168, 206, 59, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 30px;
+            color: var(--accent-green);
+        }
+
+        .company-card h3 {
+            margin-bottom: 15px;
+            padding-top: 10px;
+            color: var(--primary-green);
+            /* margin-top: 40px; */
+        }
+
+        .company-card p {
+            margin-bottom: 05px;
+            padding-top: 10px;
+            color: #000000
+            /* margin-top: 40px; */
+        }  
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            background: var(--primary-green);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            color: white;
+        }
+
+        .contact-info h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .contact-info h2:after {
+            background: var(--accent-green);
+        }
+
+        .contact-details {
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.2rem;
+            color: var(--accent-green);
+        }
+
+        .contact-text h4 {
+            margin-bottom: 5px;
+        }
+
+        .contact-text p {
+            margin: 0;
+        }
+
+        .map-container {
+            height: 300px;
+            background: #e9e9e9;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* CTA Section */
+        .cta-banner {
+            background: linear-gradient(rgba(6, 77, 47, 0.9), rgba(6, 77, 47, 0.9)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .cta-banner h2:after {
+            display: none;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-green);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-green);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact i {
+            margin-right: 15px;
+            color: var(--accent-green);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Locations Section */
+        .locations-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 70px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .location-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            width: 450px;
+            transition: all 0.3s ease;
+        }
+
+        .location-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(168, 206, 59, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 30px;
+            color: var(--accent-green);
+        }
+
+        .location-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+
+        .location-card ul {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .location-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .location-card ul li:before {
+            content: '\f3c5';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: var(--accent-green);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-container,
+            .about-container,
+            .why-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                order: 1;
+            }
+
+            .hero-image {
+                order: 2;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                order: 2;
+            }
+
+            .about-image {
+                order: 1;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><img src="images/Main_Logo_Small.png" alt=""></div>
+                <div class="logo-text">Olivtest Planet <br> <span>Technology Systems Ltd.</span></div>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="index.html">Company Home</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Empowering Businesses Through <span>Tech-Driven Solutions</span></h1>
+                <p>We design, build, optimize, and manage digital experiences that solve real business problems.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-accent">Explore Our Services</a>
+                    <a href="#" class="btn btn-outline">Contact Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <div class="about-image">
+                    <img src="images/dev (2b).jpg" alt="">
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>Olivtest Planet Technology Systems Limited is the technology and innovation powerhouse of the Olivtest Group — a dynamic company committed to delivering smart, scalable, and sustainable digital solutions. We exist to help businesses and organizations embrace digital transformation and thrive in today’s fast-evolving tech landscape.</p>
+                <p>Our expertise spans web development, UI/UX design, data analytics, and tech mentorship, offering tailored services that address real business needs with precision and creativity. Whether it’s designing intuitive user interfaces, developing responsive web platforms, building interactive dashboards, or mentoring the next generation of tech professionals, we bring together design thinking, technical excellence, and data intelligence to drive impactful outcomes.</p>
+                <p>Backed by a diverse team of developers, designers, analysts, and industry mentors, we are passionate about solving problems, improving user experiences, and creating long-term value for our clients. We collaborate closely with startups, SMEs, and enterprise teams—equipping them with the tools and insights to build with purpose, scale with confidence, and stay ahead of the curve.</p>
+                <p>At Olivtest Planet Technology Systems, innovation is not just a service—it is our mindset.</p>
+                <a href="#contact" class="btn btn-primary">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive technology solutions to enhance customer satisfaction, transform your business and drive growth</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>We design modern, responsive websites and web apps tailored for functionality, performance, and business growth.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Digital Prototype Design (MVP)</h3>
+                    <p>We provide human-centered prototype (UI/UX) design solutions using Figma, wireframing, prototyping, and usability testing.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>We turn data into actionable insights using tools like Python, Power BI, and Advanced Excel for business intelligence.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Tech Mentorship</h3>
+                    <p>Hands-on mentorship for aspiring developers and designers through guided projects, workshops, and 1:1 sessions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>Building cross-platform mobile applications that deliver seamless user experiences on any device.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and services to optimize your operations and reduce IT costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <p>Discover what sets Olivtest apart as your technology partner</p>
+            </div>
+            
+            <div class="why-container">
+                <div class="why-image">
+                    <div class="why-image">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Web Developer">
+                    </div>
+                </div>
+                
+                <div class="why-content">
+                    <ul class="why-list">
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h3>Skilled Multi-disciplinary Team</h3>
+                                <p>Experts across development, design, data science, and business strategy.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h3>Agile, Collaborative Work Process</h3>
+                                <p>Iterative development with continuous client feedback and transparency.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h3>Strong Focus on Real-world User Needs</h3>
+                                <p>Solutions designed to solve actual problems and deliver measurable value.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h3>Transparent Communication and Delivery</h3>
+                                <p>Regular updates and clear timelines to keep projects on track.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h3>Affordable Packages for Startups and SMEs</h3>
+                                <p>Flexible pricing models to fit your budget and growth stage.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Project Section -->
+    <section class="section section-light" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Past Projects</h2>
+                <p>Explore our portfolio of successful technology implementations.</p>
+            </div>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1556740714-a8395b3bf30f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="project-details">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A complete online shopping solution with inventory management and payment processing.</p>
+                        <ul>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>MongoDB</li>
+                            <li>Responsive</li>
+                            <li>Payment Gateway</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="project-details">
+                        <h3>Business Analytics Dashboard</h3>
+                        <p>Real-time data visualization for key business metrics and decision making.</p>
+                        <ul>
+                            <li>Advanced Excel</li>
+                            <li>Power BI</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Real-Time Update</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1635373390303-cc78167278ee?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="project-details">
+                        <h3>Fitness Tracking App</h3>
+                        <p>Mobile application for workout planning, progress tracking, and health monitoring.</p>
+                        <ul>
+                            <li>Flutter</li>
+                            <li>Firebase</li>
+                            <li>Figma</li>
+                            <li>Responsive</li>
+                            <li>Customizable</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1608600712992-03e5325d94c8?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="project-details">
+                        <h3>E-Learning Portal</h3>
+                        <p>Interactive learning management system with course creation and student tracking.</p>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Laravel</li>
+                            <li>MySQL</li>
+                            <li>Responsive</li>
+                            <li>Payment Gateway</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="project-details">
+                        <h3>Learning Management System (LMS)</h3>
+                        <p>Colaborative learning platform for students all over the world.</p>
+                        <ul>
+                            <li>Interactive Prototype</li>
+                            <li>Figma</li>
+                            <li>Wireframing</li>
+                            <li>Mockups</li>
+                            <li>User Research</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="project-details">
+                        <h3>Automated Staff Payment System</h3>
+                        <p>Fully automated and formatted staff payment system in Excel.</p>
+                        <ul>
+                            <li>Advanced Excel</li>
+                            <li>Customizable</li>
+                            <li>Automated</li>
+                            <li>Fully Formatted</li>
+                            <li>No VBA Used</li>
+                        </ul>
+                    </div>
+                </div>                
+
+            </div>
+        </div>
+    </section>
+
+    <<!-- Our Companies -->
+    <section class="section" id="companies">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore Our Companies</h2>
+                <p>Olivtest is a group of companies that run on a unified vision to deliver innovative, reliable, and customer-focused solutions across energy, real estate, technology, and automotive industries—empowering people and businesses through excellence and integrity.</p>
+            </div>
+            
+            <div class="company-grid">
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Olivtest Planet Energy Ltd.</h3>
+                    <p>Delivery of diesel, oil, gas, and other petroleum products nationwide.</p>
+                    <a href="energies.html" class="btn btn-accent2">Visit Page</a>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Olivtest Planet Real Estate Ltd.</h3>
+                    <p>We provide reliable Housing & Real Estate solutions accross different states in Nigeria</p>
+                    <a href="realestate.html" class="btn btn-accent2">Visit Page</a>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Olivtest Planet Technology Systems Ltd.</h3>
+                    <p>We offer Tech solutions like Web Development, Data Analytics, etc. for established businesses and startups</p>
+                    <a href="tech.html" class="btn btn-accent2">Visit Page</a>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Olivtest Planet Autos Galleria Ltd.</h3>
+                    <p>Quality car sales; connecting clients with reliable vehicles and trusted auto brands</p>
+                    <a href="autos.html" class="btn btn-accent2">Visit Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our real estate experts</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Our Office</h2>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Head Office</h4>
+                                <p>No. 42 White House Street, Saburi 2, Abuja, Nigeria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+234 703 911 1911</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>olivtestplanet2023@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.225140497084!2d7.378366074828248!3d9.058672989578132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b29d5b5a1a9%3A0x9b3b9a3d4d5b5a1a!2sAbuja%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1690569987654!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Inquiry</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Property Interest</label>
+                            <select id="interest" required>
+                                <option value="">Select an option</option>
+                                <option value="residential">Residential Land</option>
+                                <option value="commercial">Commercial Property</option>
+                                <option value="investment">Investment Opportunity</option>
+                                <option value="consultation">Consultation Service</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Looking to buy verified land in Abuja, Nasarawa, or Benue? Let us guide your next move.</h2>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-accent">Contact Us Now</a>
+                <a href="#contact" class="btn btn-outline">View Properties Listing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#home" class="footer-logo">
+                        <div class="logo-icon"><img src="images/Main_Logo_Small.png" alt=""></div>
+                        <div class="logo-text2">Olivtest Planet<span>Technology Systems Ltd.</span></div>
+                    </a>
+                    <p>Transforming businesses through innovative technology solutions. We help companies navigate digital transformation with confidence and expertise.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tech Mentorship</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Mobile Development</a></li>
+                        <li><a href="#">Data Analytics</a></li>
+                        <li><a href="#">Cloud Solutions</a></li>
+                        <li><a href="#">Tech Mentorship</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span>123 Innovation Drive, Tech District, Lagos, Nigeria</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fas fa-phone"></i></span>
+                            <span>+234 812 345 6789</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fas fa-envelope"></i></span>
+                            <span>contact@olivtestplanet.tech</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fas fa-clock"></i></span>
+                            <span>Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Olivtest Planet Technology Systems Limited. All rights reserved. Part of Olivtest Planet Group of Companies.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
